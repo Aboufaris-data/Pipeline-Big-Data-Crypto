@@ -1,0 +1,28 @@
+# ============================================================
+#  Configuration du pipeline crypto
+# ============================================================
+
+coingecko:
+  base_url: "https://api.coingecko.com/api/v3"
+  endpoint: "/coins/markets"
+  params:
+    vs_currency: "usd"        # devise de référence
+    order: "market_cap_desc"  # tri par market cap décroissant
+    per_page: 100             # nombre de cryptos à collecter
+    page: 1
+    sparkline: false
+  timeout: 30                 # secondes avant timeout HTTP
+
+minio:
+  endpoint: "localhost:9000"  # adresse de ton serveur MinIO
+  access_key: "minioadmin"    # à remplacer par tes vraies credentials
+  secret_key: "minioadmin"    # à remplacer par tes vraies credentials
+  secure: false               # true si HTTPS
+
+buckets:
+  bronze: "crypto-bronze"
+  silver: "crypto-silver"
+  gold:   "crypto-gold"
+
+pipeline:
+  log_level: "INFO"
