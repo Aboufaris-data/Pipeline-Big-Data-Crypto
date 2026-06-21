@@ -39,7 +39,6 @@ def fetch_crypto_data():
 def save_raw_to_minio(data, execution_date: datetime):
     client = get_minio_client()
 
-    # --- التعديل هنا: التأكد من وجود الـ Bucket وإنشائه إذا لم يكن موجوداً ---
     if not client.bucket_exists(BRONZE_BUCKET):
         logger.info(f"Le bucket '{BRONZE_BUCKET}' n'existe pas. Création en cours...")
         client.make_bucket(BRONZE_BUCKET)

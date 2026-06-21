@@ -73,7 +73,7 @@ def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def save_silver(client, df: pd.DataFrame, date: datetime):
-    # --- التعديل هنا: التّأكد من وجود الـ Bucket وإنشائه أوتوماتيكياً إذا لم يكن موجوداً ---
+    
     if not client.bucket_exists(SILVER_BUCKET):
         logger.info(f"Le bucket '{SILVER_BUCKET}' n'existe pas. Création en cours...")
         client.make_bucket(SILVER_BUCKET)

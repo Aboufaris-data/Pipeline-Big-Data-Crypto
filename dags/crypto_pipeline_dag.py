@@ -13,7 +13,7 @@ from src.load_gold import run as run_gold
 # 1. Alerte en cas d'échec
 def on_failure_alert(context):
     task_id = context['task_instance'].task_id
-    logging.error(f"❌ Airflow Alert: La tâche [{task_id}] a échoué.")
+    logging.error(f" Airflow Alert: La tâche [{task_id}] a échoué.")
 
 # 2. Configuration des Retries (2 tentatives, 5 min d'attente)
 default_args = {
