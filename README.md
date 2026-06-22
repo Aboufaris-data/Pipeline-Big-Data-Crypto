@@ -1,4 +1,4 @@
-# 🪙 Pipeline Big Data Crypto
+# Pipeline Big Data Crypto
 
 A end-to-end **Big Data pipeline** that collects cryptocurrency market data from the CoinGecko API, processes it through a **Medallion Architecture** (Bronze → Silver → Gold), stores each layer in **MinIO** (S3-compatible object storage), loads the final model into **Snowflake**, and visualizes it with a **Tableau** dashboard. The pipeline is fully orchestrated with **Apache Airflow**.
 
