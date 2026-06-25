@@ -54,7 +54,7 @@ Pipeline Big Data Crypto/
 │   ├── load_gold.py            # Layer 3 — Build star schema & load Snowflake
 │   └── utils.py                # Shared helpers (MinIO client, etc.)
 │
-├── .env                        # Environment variables (secrets — not committed)
+├── .env                        # Environment variables
 ├── .gitignore
 ├── ERD.pdf                     # Entity-Relationship Diagram
 ├── requirements.txt
